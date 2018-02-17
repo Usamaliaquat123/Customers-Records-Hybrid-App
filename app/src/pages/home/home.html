@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color= "dark">
+    <ion-title>
+      Customer List App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-searchbar
+    [(ngModel)]="country">
+  </ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let c of data | customerFilter:country" (click)="ItemDetail($event,c)">
+      <h1>{{c.FirstName}}</h1>
+      <h2>Address: {{c.Address}}, City: {{c.City}}</h2>
+      <p>Email : {{ c.Email }} </p>
+    </ion-item>
+  </ion-list>
+  <ion-fab right bottom #fab4>
+      <button ion-fab (click)="addCustomer()"><ion-icon name="ios-add-outline"></ion-icon></button>
+    </ion-fab>
+</ion-content>

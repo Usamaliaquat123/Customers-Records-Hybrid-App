@@ -1,0 +1,28 @@
+
+<ion-header>
+
+  <ion-navbar color= "dark">
+    <ion-title>{{customer.FirstName}} Customer Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button full color="secondary" (click)="addCustomer()">Add Customer</button>
+    <ion-card>
+      <ion-card-header>
+          <h2>Name : {{ customer.FirstName }}</h2>
+      </ion-card-header>
+      <ion-card-content>
+          <h3>Email : {{ customer.Email }} </h3>
+          <p>Gender : {{ customer.Gender }}</p>
+          <p>Address : {{ customer.Address }}</p>
+          <p>Date Of Birth: {{ customer.DOB }} </p>
+          <p>City : {{ customer.City }}</p>
+      </ion-card-content>
+    </ion-card>
+           
+        
+       
+</ion-content>

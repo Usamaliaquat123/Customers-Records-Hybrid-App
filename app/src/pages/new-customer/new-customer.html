@@ -1,0 +1,48 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add a Customer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <ion-list>
+    <ion-item>
+        <ion-label color="primary" floating>Customer Name</ion-label>
+        <ion-input [(ngModel)]='customer.FirstName'></ion-input>
+    </ion-item>  
+    <ion-item>
+        <ion-label color="primary" floating>Date Of Birth</ion-label>
+        <ion-input [(ngModel)]='customer.DOB'></ion-input>
+    </ion-item> 
+    <ion-item>
+        <ion-label color="primary" floating>Gender</ion-label>
+        <ion-input [(ngModel)]='customer.Gender'></ion-input>
+    </ion-item> 
+    <ion-item>
+        <ion-label color="primary" floating>Address</ion-label>
+        <ion-input [(ngModel)]='customer.Address'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary" floating>Email</ion-label>
+        <ion-input [(ngModel)]='customer.Email'></ion-input>
+    </ion-item>  
+    <ion-item>
+        <ion-label color="primary" floating>City</ion-label>
+        <ion-input [(ngModel)]='customer.City'></ion-input>
+    </ion-item> 
+</ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="secondary" full (click)="addCustomer(customer)">Add</button>
+      </ion-col>
+      <ion-col>
+          <button ion-button color="danger" full (click)="cancelpop()">Cancel</button>    
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
